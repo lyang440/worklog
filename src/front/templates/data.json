@@ -1,0 +1,51 @@
+{
+  data:[{
+    '销售部': [{
+      'name':'xiaoliu'
+      'mood':'0'
+      'diary':'qwerrtyuio'
+    }]
+  },{
+    '财务部': [{
+      'name':'xiaoliu'
+      'mood':'0'
+      'diary':'qwerrtyuio'
+    }]
+  },{
+    '市场部': [{
+      'name':'xiaoliu'
+      'mood':'0'
+      'diary':'qwerrtyuio'
+    }]
+  },{
+    '存储部': [{
+      'name':'xiaoliu'
+      'mood':'0'
+      'diary':'qwerrtyuio'
+    }]
+  },{
+    '研发部': [{
+      'name':'xiaoliu'
+      'mood':'0'
+      'diary':'qwerrtyuio'
+    }]
+  },{
+    '人力资源部': [{
+      'name':'xiaoliu'
+      'mood':'0'
+      'diary':'qwerrtyuio'
+    }]
+  },{
+    '质量保证部': [{
+      'name':'xiaoliu'
+      'mood':'0'
+      'diary':'qwerrtyuio'
+    }]
+  },{
+    '运维部': [{
+      'name':'xiaoliu'
+      'mood':'0'
+      'diary':'qwerrtyuio'
+    }]
+  }]
+}

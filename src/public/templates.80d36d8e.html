@@ -1,0 +1,156 @@
+<div id="templates-container" style="display:none;">
+
+<!-- Begin Templates -->
+<script type="text/ng-template" id="templates/layout.html">
+<div class="theme-white main-navbar-fixed main-menu-fixed main-menu-animated">
+  <div id="main-wrapper">
+	  <div id="main-menu" class="main-menu" role="navigation">
+	    <div id="main-menu-inner">
+	    	<div class="menu-nav">
+	    		<button class="btn form-group-margin" ng-click="addMyWorkLog()">我的日志</button>
+    			<div class="datepicker">
+    				<p class="input-group">
+						  <input type="text" class="form-control" uib-datepicker-popup="" ng-model="dt" is-open="opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" show-button-bar="false">
+						  <span class="input-group-btn">
+						    <button type="button" class="btn btn-default" ng-click="open($event)"><i class="fa fa-calendar"></i></button>
+						  </span>
+						</p>
+    			</div>
+	    	</div>
+	      <ul class="navigation">
+	      	<li class="mm-dropdown mm-dropdown-root" ng-repeat="department in departments">
+						<a href="#"><i></i><span class="mm-text mmc-dropdown-delay animated fadeIn">{{department.depar_name}}</span></a>
+						<ul class="mmc-dropdown-delay animated fadeInLeft">
+							<li>
+								<a tabindex="-1"><span class="mm-text">EVM</span></a>
+							</li>
+							<li>
+								<a tabindex="-1"><span class="mm-text">KODO</span></a>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+	    </div>
+	  </div>
+	  <div class="main-content">
+	    <div ui-view></div>
+	  </div>
+	</div>
+</div>
+	    		<!-- <div>
+
+	    		</div>
+ -->
+</script>
+<script type="text/ng-template" id="templates/home/createWorkLog.html">
+<div class="create_work_log panel-padding">
+  <!-- <form>
+
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form> -->
+  <form>
+    <div class="form-group">
+      <label for="date">选择日期</label>
+      <div class="datepicker">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="" ng-model="myDate" is-open="myOpened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" show-button-bar="false">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="fa fa-calendar"></i></button>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="mood">我的心情</label>
+      <div class="mood_tab">
+        <ul class="nav nav-pills">
+          <li data-toggle="tab" ng-click="moodSelected(0)"><img src="/image/mood_1.31b3c1d2.png"></li>
+          <li data-toggle="tab" ng-click="moodSelected(1)"><img src="/image/mood_2.60feb2b0.png"></li>
+          <li data-toggle="tab" ng-click="moodSelected(2)"><img src="/image/mood_3.bed3c6c5.png"></li>
+          <li data-toggle="tab" ng-click="moodSelected(3)"><img src="/image/mood_4.c16cb988.png"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="diary">我的日志</label>
+      <div data-provide="markdown-editable" ng-if="logDetail">
+        {{logDetail}}
+      </div>
+      <textarea ng-if="!logDetail" name="content" id="textarea" data-provide="markdown" rows="10" mark-down></textarea>
+    </div>
+    <hr/>
+    <button id="submit-btn" type="submit" class="btn" ng-click="addWorkLog()">Submit</button>
+  </form>
+
+</div>
+
+
+</script>
+<script type="text/ng-template" id="templates/home/datepicker.html">
+<!-- <p class="input-group">
+  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+  <span class="input-group-btn">
+    <button class="btn btn-default" ng-click="open($event)"><i class="fa fa-calendar"></i></button>
+  </span>
+</p> -->
+
+
+
+<!-- <div class="input-group date" id="bs-datepicker-component">
+  <input type="text" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+</div> -->
+</script>
+<script type="text/ng-template" id="templates/home/index.html">
+<div class="work-content">
+  <div class="work-date">
+    {{dt}}
+  </div>
+  <div class="log-content">
+    <accordion close-others="oneAtATime">
+      <accordion-group is-open="true">
+        <accordion-heading>
+          <div class="department-intro clearfix">
+            <div>
+              <b>存储部</b>
+            </div>
+            <div>20人</div>
+            <div class="mood">
+              <ul>
+                <li>
+                  <img src="/image/mood_1.31b3c1d2.png">
+                  <span>1人</span>
+                </li>
+                <li>
+                  <img src="/image/mood_2.60feb2b0.png">
+                  <span>1人</span>
+                </li>
+                <li>
+                  <img src="/image/mood_3.bed3c6c5.png">
+                  <span>1人</span>
+                </li>
+                <li>
+                  <img src="/image/mood_4.c16cb988.png">
+                  <span>1人</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </accordion-heading>
+        <div class="content">
+          11111111111111
+        </div>
+      </accordion-group>
+    </accordion>
+  </div>
+</div>
+
+
+</script>
+
+<!-- End Templates -->
+
+</div>

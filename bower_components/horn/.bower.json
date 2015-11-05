@@ -1,0 +1,23 @@
+{
+  "name": "horn",
+  "version": "0.0.31",
+  "homepage": "https://github.com/qbox/horn",
+  "authors": [
+    "pd@qiniu.com"
+  ],
+  "description": "Qiniu Front-end Library",
+  "keywords": [
+    "qiniu",
+    "horn"
+  ],
+  "license": "MIT",
+  "_release": "0.0.31",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.31",
+    "commit": "43545e67d48ad4352fdff80041b9bfb32ced844f"
+  },
+  "_source": "git@github.com:qbox/horn.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:qbox/horn.git"
+}

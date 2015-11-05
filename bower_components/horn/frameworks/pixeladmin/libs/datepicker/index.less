@@ -1,0 +1,74 @@
+/* bootstrap-style the datepicker calendar/widget */
+div.simple-datepicker table { margin-bottom: 0; }
+div.simple-datepicker table th,
+div.simple-datepicker table td { border-top-style:none; }
+div.simple-datepicker th {
+  color: #404040;
+}
+div.simple-datepicker a,
+div.simple-datepicker a:hover {
+  color: #404040;
+}
+div.simple-datepicker a {
+  color: #404040;
+}
+div.simple-datepicker th a.datepickerMonth{
+  margin-right: -15px;
+}
+
+.date-range-quick-select{ margin: 0 5px;}
+
+/* Style the calendar custom widget */
+.datepicker-calendar {
+  padding: 10px;
+  overflow: hidden;
+  background-color: #F7F7F7;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+}
+
+/* Remove default border from the custom widget since we're adding our own.  TBD: rework the dropdown calendar to use the default borders */
+.datepicker-calendar div.simple-datepicker {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.simple-datepicker-range{
+  display: inline-block;
+  position: relative;
+
+  .datepicker-calendar-menu{
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 32px;
+    padding: 0;
+    border: none;
+
+    .datepicker-head{
+      height: 30px;
+      margin-bottom: 5px;
+    }
+
+    .date-input{
+      display: inline-block;
+      width: 105px;
+      padding: 3px 5px;
+
+      &:focus {
+        border: 1px solid #3daacf;
+        outline: 0;
+        box-shadow: none;
+        padding: 4px 6px;
+      }
+    }
+
+    .date-apply-button{
+      float: right;
+      min-width: 60px;
+      height: 30px;
+    }
+  }
+}

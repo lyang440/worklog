@@ -1,0 +1,138 @@
+.no-select() {
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select:none;
+  -khtml-user-select:none;
+  -webkit-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+#main-navbar .un-visible {
+  border-left: none;
+  opacity: 0;
+}
+
+#main-navbar.navbar-inverse {
+  border:none;
+}
+
+#main-navbar{
+  #main-menu-toggle {
+    background-color: #f8f8f8 !important;
+  }
+  #main-navbar-collapse ,.navbar-header, .navbar-brand, .navbar-brand:hover, .navbar-brand> div{
+    background-color: #fff !important;;
+  }
+}
+
+.no-main-menu  #main-navbar{
+  .navbar-inner {
+    padding-left: 56px;
+  }
+  .logo-fixed {
+    position: absolute;
+    left: 0;
+  }
+}
+
+
+
+#main-navbar {
+  box-shadow: 0 2px 2px rgba(0,0,0,.05),0 1px 0 rgba(0,0,0,.05);
+  a {
+    cursor: pointer;
+    .no-select;
+  }
+  .navbar-collapse , .navbar-header {
+    min-height: 46px;
+  }
+  .navbar-collapse.collapsing, .navbar-collapse.in {
+    overflow: visible;
+  }
+  &.navbar-inverse {
+    border:none !important;
+    background: none !important;
+  }
+
+  .dropdown-menu {
+    padding:0 !important;
+    margin: 1px 0 0 !important;
+  }
+  .dropdown {
+    transition: 0.5s all;
+  }
+
+  .logo-fixed {
+    position: absolute;
+    left: 56px;
+  }
+  .navbar-header {
+    .logo-area {
+      position: relative;
+      cursor: pointer;
+      .logo {
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .fa {
+        position: absolute;
+        right: -25px;
+        top: 20px;
+      }
+      .fa-caret-down {
+        display: inline-block;
+      }
+      .fa-caret-up {
+        display: none;
+      }
+    }
+    .open .logo-area {
+      .fa-caret-down {
+        display: none;
+      }
+      .fa-caret-up {
+        display: inline-block;
+      }
+    }
+  }
+  .area{
+    .dropdown-menu {
+      min-width: 145px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+    }
+    li {
+      list-style: none;
+      padding-left: 10px;
+      &:hover {
+        background: #eee;
+      }
+      & > a {
+        line-height: 35px;
+        display: block;
+      }
+      .fn-list, a:hover .fn-list{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+        margin-right: 5px;
+        background-color: #857198!important;
+      }
+    }
+  }
+  .right>.navbar-nav>li {
+    border-left: 1px solid #f1f1f1;
+    border-right: none;
+  }
+}
+
+
+#main-navbar #product-dropdown.dropdown > a:after {
+  content: "";
+}

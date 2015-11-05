@@ -1,0 +1,14 @@
+{
+  "name": "horn",
+  "version": "0.0.2",
+  "homepage": "https://github.com/qbox/horn",
+  "authors": [
+    "pd@qiniu.com"
+  ],
+  "description": "Qiniu Front-end Library",
+  "keywords": [
+    "qiniu",
+    "horn"
+  ],
+  "license": "MIT"
+}

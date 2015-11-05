@@ -1,0 +1,36 @@
+<div class="theme-white main-navbar-fixed main-menu-fixed main-menu-animated">
+  <div id="main-wrapper">
+	  <div id="main-menu" class="main-menu" role="navigation">
+	    <div id="main-menu-inner">
+	    	<div class="menu-nav">
+	    		<button class="btn form-group-margin" ng-click="addMyWorkLog()">我的日志</button>
+    			<div class="datepicker">
+    				<p class="input-group">
+						  <input type="text" class="form-control" uib-datepicker-popup="" ng-model="date" is-open="opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" show-button-bar="false">
+						  <span class="input-group-btn">
+						    <button type="button" class="btn btn-default" ng-click="open($event)"><i class="fa fa-calendar"></i></button>
+						  </span>
+						</p>
+    			</div>
+	    	</div>
+	      <ul class="navigation padding-sm-vr">
+	      	<li class="mm-dropdown mm-dropdown-root panel-padding-h" ng-repeat="department in departments">
+						<a href="#" ng-click="departmentSelected(department.name)"><i></i><span class="mm-text mmc-dropdown-delay animated fadeIn">{{department.depar_name}}  ({{department.members.length}}人)</span></a>
+						<ul class="mmc-dropdown-delay animated fadeInLeft">
+							<li ng-repeat="member in department.members">
+								<a tabindex="-1" ng-click="memberSelected(member.name)"><span class="mm-text">{{member.name}}</span></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+	    </div>
+	  </div>
+	  <div class="main-content">
+	    <div ui-view></div>
+	  </div>
+	</div>
+</div>
+	    		<!-- <div>
+
+	    		</div>
+ -->

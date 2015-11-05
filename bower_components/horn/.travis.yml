@@ -1,0 +1,15 @@
+notifications:
+  email:
+    - pd@qiniu.com
+cache:
+  directories:
+  - node_modules
+branches:
+  only:
+    - master
+    - develop
+language: node_js
+node_js:
+  - "0.12"
+  - "iojs"
+  - "iojs-v1.0.4"

@@ -1,0 +1,65 @@
+<div class="work-content" ng-if="showByDate">
+  <div class="work-date">
+    {{date}}
+  </div>
+  <div class="log-content" ng-repeat="workLog in workLogList">
+    <accordion close-others="oneAtATime">
+      <accordion-group is-open="true">
+        <accordion-heading>
+          <div class="department-intro clearfix">
+            <div>
+              <b>{{workLog.depar_name}}</b>
+            </div>
+            <div>共{{workLog.members.length}}人</div>
+            <div class="mood">
+              <ul>
+                <li>
+                  <img src="./image/mood_1.png">
+                  <span>1人</span>
+                </li>
+                <li>
+                  <img src="./image/mood_2.png">
+                  <span>1人</span>
+                </li>
+                <li>
+                  <img src="./image/mood_3.png">
+                  <span>1人</span>
+                </li>
+                <li>
+                  <img src="./image/mood_4.png">
+                  <span>1人</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </accordion-heading>
+        <div class="content">
+          {{workLog.topic}}
+        </div>
+      </accordion-group>
+    </accordion>
+  </div>
+</div>
+<div class="work-content" ng-if="!showByDate">
+  <div class="work-date">
+    {{member}}
+  </div>
+  <div class="log-content" ng-repeat="workLog in workLogList">
+    <accordion close-others="oneAtATime">
+      <accordion-group is-open="true">
+        <accordion-heading>
+          <div class="department-intro clearfix">
+            <div>
+              <b>{{workLog.depar_name}}</b>
+              <span></span>
+            </div>
+          </div>
+        </accordion-heading>
+        <div class="content">
+          {{workLog.topic}}
+        </div>
+      </accordion-group>
+    </accordion>
+  </div>
+</div>
+

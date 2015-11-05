@@ -1,0 +1,47 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    border: 0;
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB', Arial, "微软雅黑", sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+html {
+    -webkit-text-size-adjust: none;
+}
+ul li{
+    list-style: none;
+}
+a{
+    cursor: pointer;
+}
+a:hover, a:focus, a:active, a:link{
+    text-decoration: none;
+    outline: none;
+}
+
+@border-color: #ddd;
+
+.main-menu{
+  border-right: 1px solid @border-color;
+  .menu-nav{
+    padding: 30px 34px 20px;
+    border-bottom: 1px solid @border-color;
+  }
+}
+.main-content{
+  padding: 40px;
+}
+
+.datepicker{
+  table .btn-sm{
+    padding: 5px 7px;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    background-image: none;
+    span{
+      line-height: 20px;
+    }
+  }
+}

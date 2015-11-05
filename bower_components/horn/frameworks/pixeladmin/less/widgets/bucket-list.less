@@ -1,0 +1,82 @@
+.bucket-list {
+  @widget-bucket-list-vmargin: 5px;
+  @widget-bucket-list-vpadding: 13px;
+
+  .control-row {
+    overflow: hidden;
+  }
+
+  .bucket {
+    margin-top: @widget-bucket-list-vmargin;
+    margin-bottom: @widget-bucket-list-vmargin;
+    padding: @widget-bucket-list-vpadding 0;
+
+    position: relative;
+    overflow: hidden;
+
+    .transition(all 0.2s);
+
+    > * {
+      line-height: 19px;
+    }
+
+    .bucket-icon {
+      float: left;
+      margin-right: 20px;
+    }
+
+    .setting-icon {
+      float: right;
+      margin-left: 20px;
+      opacity: 0;
+      .transition(all 0.2s);
+    }
+
+    .bucket-info {
+      overflow: hidden;
+
+      .bucket-name {
+        float: left;
+        font-weight: bold;
+
+        @media (max-width: @screen-tablet) { width: 100%; }
+        @media (min-width: @screen-tablet) { width: 100%; }
+        @media (min-width: @screen-desktop) { width: 65%; }
+      }
+
+      .bucket-stats {
+        float: left;
+
+        @media (max-width: @screen-tablet) { width: 100%; }
+        @media (min-width: @screen-tablet) { width: 100%; }
+        @media (min-width: @screen-desktop) { width: 35%; }
+
+        .stat {
+          float: left;
+          margin-right: 10px;
+        }
+        .icon {
+          margin-right: 0.3em;
+        }
+      }
+
+      .last-operation {
+        clear: both;
+      }
+    }
+
+    &:hover {
+      background-color: @gray-lighter;
+      cursor: pointer;
+
+      .setting-icon {
+        opacity: 100;
+      }
+    }
+  }
+
+  .icon-loading {
+    height: 50px;
+    width: 30px;
+  }
+}
